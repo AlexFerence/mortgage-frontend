@@ -113,14 +113,15 @@ const App = () => {
     <div className='app'>
       <div className='left'>
         <div className='left-container'>
-          <div className='title'>Payment Size</div>
+          <div className='title'>Payment Per Schedule</div>
           <div className='number'>{calculateResponse?.paymentPerScheule ? "$" + calculateResponse.paymentPerScheule : "?"}</div>
         </div>
       </div>
       <div className='right'>
         {/* Create a form for each field */}
         <div className='form-container'>
-          <div>Mortgage Payment Calculator</div>
+          <div className="form-title">BC Mortgage Calculator</div>
+          <div className="form-subtitle">Even if it is impossible to buy a house in Vancouver right now</div>
           <form onSubmit={handleSubmit}>
             <label>
               Property Price:
@@ -131,8 +132,8 @@ const App = () => {
               <input onChange={(e) => setDownPayment(e.target.value)} placeholder='ex: 200000' />
             </label>
             <label>
-              Annual Interest Rate Percentage: %
-              <input onChange={(e) => setAnnualInterestRatePercentage(e.target.value)} placeholder='ex: 5.2%' />
+              Annual Interest Rate %:
+              <input onChange={(e) => setAnnualInterestRatePercentage(e.target.value)} placeholder='ex: 5.2' />
             </label>
             <label>
               Amortization Period:
