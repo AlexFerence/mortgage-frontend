@@ -114,7 +114,7 @@ const App = () => {
       <div className='left'>
         <div className='left-container'>
           <div className='title'>Payment Size</div>
-          <div className='number'>{calculateResponse?.monthlyPayment ? "$" + calculateResponse.monthlyPayment : "?"}</div>
+          <div className='number'>{calculateResponse?.paymentPerScheule ? "$" + calculateResponse.paymentPerScheule : "?"}</div>
         </div>
       </div>
       <div className='right'>
@@ -124,15 +124,15 @@ const App = () => {
           <form onSubmit={handleSubmit}>
             <label>
               Property Price:
-              <input onChange={(e) => setPropertyPrice(e.target.value)} placeholder='500000' />
+              <input onChange={(e) => setPropertyPrice(e.target.value)} placeholder='ex: 500000' />
             </label>
             <label>
               Down Payment:
-              <input onChange={(e) => setDownPayment(e.target.value)} placeholder='200000' />
+              <input onChange={(e) => setDownPayment(e.target.value)} placeholder='ex: 200000' />
             </label>
             <label>
-              Annual Interest Rate Percentage:
-              <input onChange={(e) => setAnnualInterestRatePercentage(e.target.value)} />
+              Annual Interest Rate Percentage: %
+              <input onChange={(e) => setAnnualInterestRatePercentage(e.target.value)} placeholder='ex: 5.2%' />
             </label>
             <label>
               Amortization Period:

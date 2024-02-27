@@ -1,4 +1,4 @@
 
 export interface CalculateMortgageResponseTO {
-	monthlyPayment: number;
+	paymentPerScheule: number;
 }
